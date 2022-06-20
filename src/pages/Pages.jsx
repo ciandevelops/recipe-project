@@ -7,7 +7,7 @@ const Pages = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/cusine" element={<Cusine />} />
+      <Route path="/cusine/:type" element={<Cusine />} />
     </Routes>
   );
 };
