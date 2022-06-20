@@ -8,8 +8,8 @@ const Category = () => {
   return (
     <List>
       <SLink to={"/cusine/italian"}>
-        <FaPizzaSlice />
         <h4>Italian</h4>
+        <FaPizzaSlice />
       </SLink>
       <SLink to={"/cusine/american"}>
         <FaHamburger />
