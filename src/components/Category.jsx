@@ -7,22 +7,22 @@ import { NavLink } from "react-router-dom";
 const Category = () => {
   return (
     <List>
-      <NavLink to={"/cusine/italian"}>
+      <SLink to={"/cusine/italian"}>
         <FaPizzaSlice />
         <h4>Italian</h4>
-      </NavLink>
-      <NavLink to={"/cusine/american"}>
+      </SLink>
+      <SLink to={"/cusine/american"}>
         <FaHamburger />
         <h4>American</h4>
-      </NavLink>
-      <NavLink to={"/cusine/thai"}>
+      </SLink>
+      <SLink to={"/cusine/thai"}>
         <GiNoodles />
         <h4>Thai</h4>
-      </NavLink>
-      <NavLink to={"/cusine/asian"}>
+      </SLink>
+      <SLink to={"/cusine/asian"}>
         <GiChopsticks />
         <h4>Asian</h4>
-      </NavLink>
+      </SLink>
     </List>
   );
 };
@@ -31,6 +31,39 @@ const List = styled.div`
   display: flex;
   justify-content: center;
   margin: 2rem 0rem;
+`;
+
+const SLink = styled(NavLink)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 2rem;
+  text-decoration: none;
+  background: linear-gradient(35deg, #494949, #313131);
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+  transform: scale(0.8);
+
+  h4 {
+    color: white;
+    font-size: 0.8rem;
+  }
+  svg {
+    color: white;
+    font-size: 1.5rem;
+  }
+  &.active {
+    background: linear-gradient(to right, #f27121, #e94057);
+    svg {
+      color: white;
+    }
+    h4 {
+      color: white;
+    }
+  }
 `;
 
 export default Category;
